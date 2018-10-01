@@ -1,0 +1,151 @@
+$font-stack: Lato, sans-serif;
+$primary-color: #2e3641;
+$secondary-color: #9eb2c0;
+$color-background: #e9f0f4;
+$color-white: #fff;
+$font-size: 12px;
+
+
+body {
+    font: 100% $font-stack;
+    color: $primary-color;
+    margin: 0px;
+    justify-content: center;
+    background: $color-background;
+    height: 100%;
+    font-size: $font-size; }
+
+.container {
+    margin: 10% auto;
+    width: 320px;
+    height: 100%;
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+// FIRST ROW -- HEADER
+    .todo__header--row {
+        display: block;
+        position: relative;
+        align-content: center;
+        width: 320px;
+        height: 36px;
+        p {
+            color: $color-white;
+            padding: 0 0 0 40px;
+            text-align: left;
+            margin: 0;
+            line-height: 36px; }
+
+        .todo__header--border {
+            display: block;
+            position: absolute;
+            left: 29px;
+            width: 5px;
+            height: 36px;
+            box-sizing: border-box;
+            border-left: 1px solid #454f5c;
+            border-right: 1px solid #454f5c; 
+        }
+    }
+
+    // TASK ROWS
+    .todo__li--row {
+        background-color: $color-white;
+        align-items: center;
+        border: 1px solid #e6ebed;
+        border-top: none;
+        height: 29px;
+
+        .view {
+            position: relative;
+            height: 29px;
+        }
+
+        li {width: 320px;}
+
+        .button__delete {
+            // position
+            display: block;
+            position: absolute;
+            right: 10px;
+            top: 9px;
+
+            // appearence
+            cursor: pointer;
+            content: '';
+            border: none;
+            padding: 0;
+            width: 11px;
+            height: 12px;
+            background: url(../img/trashes.png) left center no-repeat; }
+         .button__delete:focus {outline: none;}
+
+         .button__add {
+            // position
+            display: block;
+            position: absolute;
+            left: 10px;
+            top: 9px;
+
+            // appearence
+            cursor: pointer;
+            content: '';
+            border: none;
+            padding: 0;
+            width: 10px;
+            height: 10px;
+            background: url(../img/plus.png) no-repeat;
+         }
+         .button__add:focus {outline: none;}
+
+        input {
+            color: $primary-color;
+            margin: auto 0;
+            position: absolute;
+            left: 10px;
+            height: 29px;
+        }
+
+        label {
+            display: block;
+            padding: 7px 30px 7px 40px;
+        }
+
+        .todo__li--border {
+            width: 5px;
+            height: 30px;
+            position: absolute;
+            left: 28px;
+            box-sizing: border-box;
+            border-left: 1px solid #f2e3df;
+            border-right: 1px solid #f2e3df; }
+
+        // CHECKBOXES
+        .trigger {display:none;}
+        .checker::before {
+            // position
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            
+            // appearence
+            cursor: pointer;
+            background: url(../img/checkboxes.png) left center no-repeat;
+            width: 9px;
+            height: 9px;
+        }
+
+        .trigger:checked + .checker::before {background-position: right center;}
+        .trigger:checked + label {
+            color: $secondary-color;
+            text-decoration: line-through;
+        }
+        .trigger:checked ~ button.button__delete {background-position: right center;}
+    }
+}
+    .container:first-child {background-color: $primary-color;}

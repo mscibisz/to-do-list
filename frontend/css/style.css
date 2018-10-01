@@ -1,0 +1,139 @@
+body {
+  font: 100% Lato, sans-serif;
+  color: #2e3641;
+  margin: 0px;
+  justify-content: center;
+  background: #e9f0f4;
+  height: 100%;
+  font-size: 12px;
+}
+
+.container {
+  margin: 10% auto;
+  width: 320px;
+  height: 100%;
+}
+.container ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.container .todo__header--row {
+  display: block;
+  position: relative;
+  align-content: center;
+  width: 320px;
+  height: 36px;
+}
+.container .todo__header--row p {
+  color: #fff;
+  padding: 0 0 0 40px;
+  text-align: left;
+  margin: 0;
+  line-height: 36px;
+}
+.container .todo__header--row .todo__header--border {
+  display: block;
+  position: absolute;
+  left: 29px;
+  width: 5px;
+  height: 36px;
+  box-sizing: border-box;
+  border-left: 1px solid #454f5c;
+  border-right: 1px solid #454f5c;
+}
+.container .todo__li--row {
+  background-color: #fff;
+  align-items: center;
+  border: 1px solid #e6ebed;
+  border-top: none;
+  height: 29px;
+}
+.container .todo__li--row .view {
+  position: relative;
+  height: 29px;
+}
+.container .todo__li--row li {
+  width: 320px;
+}
+.container .todo__li--row .button__delete {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 9px;
+  cursor: pointer;
+  content: "";
+  border: none;
+  padding: 0;
+  width: 11px;
+  height: 12px;
+  background: url(../img/trashes.png) left center no-repeat;
+}
+.container .todo__li--row .button__delete:focus {
+  outline: none;
+}
+.container .todo__li--row .button__add {
+  display: block;
+  position: absolute;
+  left: 10px;
+  top: 9px;
+  cursor: pointer;
+  content: "";
+  border: none;
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  background: url(../img/plus.png) no-repeat;
+}
+.container .todo__li--row .button__add:focus {
+  outline: none;
+}
+.container .todo__li--row input {
+  color: #2e3641;
+  margin: auto 0;
+  position: absolute;
+  left: 10px;
+  height: 29px;
+}
+.container .todo__li--row label {
+  display: block;
+  padding: 7px 30px 7px 40px;
+}
+.container .todo__li--row .todo__li--border {
+  width: 5px;
+  height: 30px;
+  position: absolute;
+  left: 28px;
+  box-sizing: border-box;
+  border-left: 1px solid #f2e3df;
+  border-right: 1px solid #f2e3df;
+}
+.container .todo__li--row .trigger {
+  display: none;
+}
+.container .todo__li--row .checker::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  background: url(../img/checkboxes.png) left center no-repeat;
+  width: 9px;
+  height: 9px;
+}
+.container .todo__li--row .trigger:checked + .checker::before {
+  background-position: right center;
+}
+.container .todo__li--row .trigger:checked + label {
+  color: #9eb2c0;
+  text-decoration: line-through;
+}
+.container .todo__li--row .trigger:checked ~ button.button__delete {
+  background-position: right center;
+}
+
+.container:first-child {
+  background-color: #2e3641;
+}
+
+/*# sourceMappingURL=style.css.map */
