@@ -15,7 +15,7 @@
             <p>ToDo List</p>
         </div>
 
-        <ul>
+        <ul id="ulToDo">
             <li class="todo__li--row">
                 <div class="view">
                     <div class="todo__li--border"></div>
@@ -72,11 +72,13 @@
 
             <li class="todo__li--row">
                 <div class="view">
-                    <div class="button__add"></div>
+                    <div class="button__add" onclick="newElement()"></div>
                     <div class="todo__li--border"></div>
+                    <input type="text" placeholder="text jakis tam" id="inputText">
                 </div>
             </li>
         </ul>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>

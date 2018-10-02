@@ -131,6 +131,9 @@ body {
 .container .todo__li--row .trigger:checked ~ button.button__delete {
   background-position: right center;
 }
+.container #inputText {
+  margin-left: 30px;
+}
 
 .container:first-child {
   background-color: #2e3641;

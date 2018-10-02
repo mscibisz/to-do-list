@@ -147,5 +147,8 @@ ul {
         }
         .trigger:checked ~ button.button__delete {background-position: right center;}
     }
+    #inputText {
+        margin-left: 30px;
+    }
 }
     .container:first-child {background-color: $primary-color;}
