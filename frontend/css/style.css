@@ -72,22 +72,6 @@ body {
 .container .todo__li--row .button__delete:focus {
   outline: none;
 }
-.container .todo__li--row .button__add {
-  display: block;
-  position: absolute;
-  left: 10px;
-  top: 9px;
-  cursor: pointer;
-  content: "";
-  border: none;
-  padding: 0;
-  width: 10px;
-  height: 10px;
-  background: url(../img/plus.png) no-repeat;
-}
-.container .todo__li--row .button__add:focus {
-  outline: none;
-}
 .container .todo__li--row input {
   color: #2e3641;
   margin: auto 0;
@@ -131,8 +115,51 @@ body {
 .container .todo__li--row .trigger:checked ~ button.button__delete {
   background-position: right center;
 }
-.container #inputText {
-  margin-left: 30px;
+.container .input__create--new {
+  background-color: #fff;
+  border: 1px solid #f2e3df;
+  border-top: none;
+  height: 29px;
+  position: relative;
+  margin: 0 auto;
+}
+.container .input__create--border {
+  width: 5px;
+  height: 30px;
+  position: absolute;
+  left: 28px;
+  box-sizing: border-box;
+  border-left: 1px solid #f2e3df;
+  border-right: 1px solid #f2e3df;
+}
+.container .input__create--new input[type=text] {
+  box-sizing: border-box;
+  margin-left: 40px;
+  height: 29px;
+  width: 250px;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  font: 100% Lato, sans-serif;
+}
+.container .input__create--new input[type=text]:focus {
+  outline: none;
+}
+.container .button__add {
+  display: block;
+  position: absolute;
+  left: 10px;
+  top: 9px;
+  cursor: pointer;
+  content: "";
+  border: none;
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  background: url(../img/plus.png) no-repeat;
+}
+.container .button__add:focus {
+  outline: none;
 }
 
 .container:first-child {

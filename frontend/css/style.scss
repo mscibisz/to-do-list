@@ -84,24 +84,6 @@ ul {
             background: url(../img/trashes.png) left center no-repeat; }
          .button__delete:focus {outline: none;}
 
-         .button__add {
-            // position
-            display: block;
-            position: absolute;
-            left: 10px;
-            top: 9px;
-
-            // appearence
-            cursor: pointer;
-            content: '';
-            border: none;
-            padding: 0;
-            width: 10px;
-            height: 10px;
-            background: url(../img/plus.png) no-repeat;
-         }
-         .button__add:focus {outline: none;}
-
         input {
             color: $primary-color;
             margin: auto 0;
@@ -147,8 +129,52 @@ ul {
         }
         .trigger:checked ~ button.button__delete {background-position: right center;}
     }
-    #inputText {
-        margin-left: 30px;
+
+    // TEXT INPUT
+    .input__create--new {
+        background-color: $color-white;
+        border: 1px solid #f2e3df;
+        border-top: none;
+        height: 29px;
+        position: relative;
+        margin: 0 auto;
     }
+    .input__create--border {
+        width: 5px;
+        height: 30px;
+        position: absolute;
+        left: 28px;
+        box-sizing: border-box;
+        border-left: 1px solid #f2e3df;
+        border-right: 1px solid #f2e3df; }
+    .input__create--new input[type=text] {
+        box-sizing: border-box;
+        margin-left: 40px;
+        height: 29px;
+        width: 250px;
+        border: none;
+        outline: none;
+        font-size: $font-size;
+        font: 100% $font-stack;
+    }
+    .input__create--new input[type=text]:focus {outline: none;}
+
+    .button__add {
+        // position
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: 9px;
+
+        // appearence
+        cursor: pointer;
+        content: '';
+        border: none;
+        padding: 0;
+        width: 10px;
+        height: 10px;
+        background: url(../img/plus.png) no-repeat;
+     }
+     .button__add:focus {outline: none;}
 }
     .container:first-child {background-color: $primary-color;}
