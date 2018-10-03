@@ -56,13 +56,14 @@ ul {
     .todo__li--row {
         background-color: $color-white;
         align-items: center;
-        border: 1px solid #e6ebed;
+        border: 1px solid #dbdbdb;
+        border-bottom: 1px solid #e6ebed;
         border-top: none;
-        height: 29px;
+        min-height: 29px;
 
         .view {
             position: relative;
-            height: 29px;
+            min-height: 29px;
         }
 
         li {width: 320px;}
@@ -95,11 +96,12 @@ ul {
         label {
             display: block;
             padding: 7px 30px 7px 40px;
+            word-break: break-all;
         }
 
         .todo__li--border {
             width: 5px;
-            height: 30px;
+            min-height: 104%;
             position: absolute;
             left: 28px;
             box-sizing: border-box;
@@ -133,7 +135,7 @@ ul {
     // TEXT INPUT
     .input__create--new {
         background-color: $color-white;
-        border: 1px solid #f2e3df;
+        border: 1px solid #dbdbdb;
         border-top: none;
         height: 29px;
         position: relative;

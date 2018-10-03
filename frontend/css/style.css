@@ -45,13 +45,14 @@ body {
 .container .todo__li--row {
   background-color: #fff;
   align-items: center;
-  border: 1px solid #e6ebed;
+  border: 1px solid #dbdbdb;
+  border-bottom: 1px solid #e6ebed;
   border-top: none;
-  height: 29px;
+  min-height: 29px;
 }
 .container .todo__li--row .view {
   position: relative;
-  height: 29px;
+  min-height: 29px;
 }
 .container .todo__li--row li {
   width: 320px;
@@ -82,10 +83,11 @@ body {
 .container .todo__li--row label {
   display: block;
   padding: 7px 30px 7px 40px;
+  word-break: break-all;
 }
 .container .todo__li--row .todo__li--border {
   width: 5px;
-  height: 30px;
+  min-height: 104%;
   position: absolute;
   left: 28px;
   box-sizing: border-box;
@@ -117,7 +119,7 @@ body {
 }
 .container .input__create--new {
   background-color: #fff;
-  border: 1px solid #f2e3df;
+  border: 1px solid #dbdbdb;
   border-top: none;
   height: 29px;
   position: relative;
