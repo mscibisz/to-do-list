@@ -12,7 +12,6 @@ function newElement() {
   var t = document.createTextNode(inputText);
 
   if (inputText === '') {
-    alert("You must write something!");
   } else {
     document.getElementById("ulToDo").appendChild(li);
   }

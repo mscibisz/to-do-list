@@ -82,8 +82,13 @@ ul {
             padding: 0;
             width: 11px;
             height: 12px;
-            background: url(../img/trashes.png) left center no-repeat; }
+            background: url(../img/trash.svg) no-repeat; }
          .button__delete:focus {outline: none;}
+         
+         .cls-1 {
+            fill: #2e3641;
+            fill-rule: evenodd;
+          }
 
         input {
             color: $primary-color;
@@ -109,27 +114,53 @@ ul {
             border-right: 1px solid #f2e3df; }
 
         // CHECKBOXES
+
+        // span.checkbox {
+        //     position: absolute;
+        //     left: 10px;
+        //     top: 10px;
+        //     box-shadow: inset 2px 0px 5px rgba(193,207,217,.35);
+
+        //     width: 9px;
+        //     height: 9px;
+        //     box-sizing: border-box;
+        //     border: 1px solid #dae4eb;
+        // }
+        // p {
+        //     color: #a8bd44;
+        //     font-size: 6px;
+        //     margin: 0;
+        //     text-align: center;
+        // }
+
+
+
         .trigger {display:none;}
         .checker::before {
             // position
             content: '';
             position: absolute;
-            top: 10px;
             left: 10px;
-            
-            // appearence
-            cursor: pointer;
-            background: url(../img/checkboxes.png) left center no-repeat;
+            top: 10px;
+            box-shadow: inset 2px 0px 5px rgba(193,207,217,.35);
+
             width: 9px;
             height: 9px;
+            box-sizing: border-box;
+            border: 1px solid #dae4eb;
+        
+            color: #a8bd44;
+            font-size: 6px;
+            margin: 0;
+            text-align: center;
         }
 
-        .trigger:checked + .checker::before {background-position: right center;}
+        .trigger:checked + .checker::before {content: '✓';}
         .trigger:checked + label {
             color: $secondary-color;
             text-decoration: line-through;
         }
-        .trigger:checked ~ button.button__delete {background-position: right center;}
+        .trigger:checked ~ button.button__delete {fill: $secondary-color;}
     }
 
     // TEXT INPUT

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font: 100% Lato, sans-serif;
   color: #2e3641;
@@ -68,10 +69,14 @@ body {
   padding: 0;
   width: 11px;
   height: 12px;
-  background: url(../img/trashes.png) left center no-repeat;
+  background: url(../img/trash.svg) no-repeat;
 }
 .container .todo__li--row .button__delete:focus {
   outline: none;
+}
+.container .todo__li--row .cls-1 {
+  fill: #2e3641;
+  fill-rule: evenodd;
 }
 .container .todo__li--row input {
   color: #2e3641;
@@ -100,22 +105,27 @@ body {
 .container .todo__li--row .checker::before {
   content: "";
   position: absolute;
-  top: 10px;
   left: 10px;
-  cursor: pointer;
-  background: url(../img/checkboxes.png) left center no-repeat;
+  top: 10px;
+  box-shadow: inset 2px 0px 5px rgba(193, 207, 217, 0.35);
   width: 9px;
   height: 9px;
+  box-sizing: border-box;
+  border: 1px solid #dae4eb;
+  color: #a8bd44;
+  font-size: 6px;
+  margin: 0;
+  text-align: center;
 }
 .container .todo__li--row .trigger:checked + .checker::before {
-  background-position: right center;
+  content: "✓";
 }
 .container .todo__li--row .trigger:checked + label {
   color: #9eb2c0;
   text-decoration: line-through;
 }
 .container .todo__li--row .trigger:checked ~ button.button__delete {
-  background-position: right center;
+  fill: #9eb2c0;
 }
 .container .input__create--new {
   background-color: #fff;
@@ -158,7 +168,7 @@ body {
   padding: 0;
   width: 10px;
   height: 10px;
-  background: url(../img/plus.png) no-repeat;
+  background: url(../img/plus.svg) no-repeat;
 }
 .container .button__add:focus {
   outline: none;
