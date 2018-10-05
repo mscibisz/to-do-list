@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=368px, initial-scale=1.0">
+    <meta name="viewport" content="width=368, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
@@ -14,7 +14,7 @@
             <div class="todo__header--border"></div>
             <p>ToDo List</p>
         </div>
-
+<!-- includes a few examples that were on the graphics -->
         <ul id="ulToDo">
             <li class="todo__li--row">
                 <div class="view">
@@ -72,11 +72,11 @@
         </ul>
         
         <div class="input__create--new">
-            <div class="view">
-                <div class="button__add" onclick="newElement()"></div>
+            <form class="view" onsubmit="newElement(event)">
                 <div class="input__create--border"></div>
-                <input type="text" id="inputText">
-            </div>
+                <input type="text" id="inputText" required>
+                <input type="submit" class="button__add" value=""></input>
+            </form>
         </div>
     </div>
     <script src="js/script.js"></script>

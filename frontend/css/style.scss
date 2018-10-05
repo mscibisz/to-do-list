@@ -26,7 +26,7 @@ ul {
     list-style-type: none;
 }
 
-// FIRST ROW -- HEADER
+    // FIRST ROW -- HEADER
     .todo__header--row {
         display: block;
         position: relative;
@@ -40,7 +40,7 @@ ul {
             margin: 0;
             line-height: 36px; }
 
-        .todo__header--border {
+        .todo__header--border {                 // double line inside of header
             display: block;
             position: absolute;
             left: 29px;
@@ -63,12 +63,11 @@ ul {
 
         .view {
             position: relative;
-            min-height: 29px;
-        }
+            min-height: 29px; }
 
         li {width: 320px;}
 
-        .button__delete {
+        .button__delete {                       // styles for the delete button (trash)
             // position
             display: block;
             position: absolute;
@@ -84,27 +83,12 @@ ul {
             height: 12px;
             background: url(../img/trash.svg) no-repeat; }
          .button__delete:focus {outline: none;}
-         
-         .cls-1 {
-            fill: #2e3641;
-            fill-rule: evenodd;
-          }
 
-        input {
-            color: $primary-color;
-            margin: auto 0;
-            position: absolute;
-            left: 10px;
-            height: 29px;
-        }
-
-        label {
+        label {                                 // already existing/created text inside of the list
             display: block;
             padding: 7px 30px 7px 40px;
-            word-break: break-all;
-        }
-
-        .todo__li--border {
+            word-break: break-all; }
+        .todo__li--border {                     // border styles inside of the list
             width: 5px;
             min-height: 104%;
             position: absolute;
@@ -113,28 +97,7 @@ ul {
             border-left: 1px solid #f2e3df;
             border-right: 1px solid #f2e3df; }
 
-        // CHECKBOXES
-
-        // span.checkbox {
-        //     position: absolute;
-        //     left: 10px;
-        //     top: 10px;
-        //     box-shadow: inset 2px 0px 5px rgba(193,207,217,.35);
-
-        //     width: 9px;
-        //     height: 9px;
-        //     box-sizing: border-box;
-        //     border: 1px solid #dae4eb;
-        // }
-        // p {
-        //     color: #a8bd44;
-        //     font-size: 6px;
-        //     margin: 0;
-        //     text-align: center;
-        // }
-
-
-
+        // adds/replaces styles to existing li when checked
         .trigger {display:none;}
         .checker::before {
             // position
@@ -154,17 +117,17 @@ ul {
             margin: 0;
             text-align: center;
         }
-
+        // when checked do:
         .trigger:checked + .checker::before {content: '✓';}
         .trigger:checked + label {
             color: $secondary-color;
             text-decoration: line-through;
         }
-        .trigger:checked ~ button.button__delete {fill: $secondary-color;}
+        .trigger:checked ~ button.button__delete {background-image: url(../img/trash-checked.svg);}
     }
 
-    // TEXT INPUT
-    .input__create--new {
+    // FORM -- TEXT INPUT
+    .input__create--new {                       // styles the general div for entering new records
         background-color: $color-white;
         border: 1px solid #dbdbdb;
         border-top: none;
@@ -172,7 +135,7 @@ ul {
         position: relative;
         margin: 0 auto;
     }
-    .input__create--border {
+    .input__create--border {                     // adds dual border
         width: 5px;
         height: 30px;
         position: absolute;
@@ -180,7 +143,7 @@ ul {
         box-sizing: border-box;
         border-left: 1px solid #f2e3df;
         border-right: 1px solid #f2e3df; }
-    .input__create--new input[type=text] {
+    .input__create--new input[type=text] {       // the text field for entering task description
         box-sizing: border-box;
         margin-left: 40px;
         height: 29px;
@@ -192,6 +155,7 @@ ul {
     }
     .input__create--new input[type=text]:focus {outline: none;}
 
+    // STYLES FOR BUTTON SUBMIT
     .button__add {
         // position
         display: block;
@@ -206,7 +170,7 @@ ul {
         padding: 0;
         width: 10px;
         height: 10px;
-        background: url(../img/plus.png) no-repeat;
+        background: url(../img/plus.svg) no-repeat;
      }
      .button__add:focus {outline: none;}
 }

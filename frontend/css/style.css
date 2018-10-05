@@ -74,17 +74,6 @@ body {
 .container .todo__li--row .button__delete:focus {
   outline: none;
 }
-.container .todo__li--row .cls-1 {
-  fill: #2e3641;
-  fill-rule: evenodd;
-}
-.container .todo__li--row input {
-  color: #2e3641;
-  margin: auto 0;
-  position: absolute;
-  left: 10px;
-  height: 29px;
-}
 .container .todo__li--row label {
   display: block;
   padding: 7px 30px 7px 40px;
@@ -125,7 +114,7 @@ body {
   text-decoration: line-through;
 }
 .container .todo__li--row .trigger:checked ~ button.button__delete {
-  fill: #9eb2c0;
+  background-image: url(../img/trash-checked.svg);
 }
 .container .input__create--new {
   background-color: #fff;
